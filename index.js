@@ -1,4 +1,4 @@
-export default function (kibana) {
+module.exports = function (kibana) {
   return new kibana.Plugin({
     id: 'ga',
 
@@ -8,10 +8,11 @@ export default function (kibana) {
         let config = server.config();
         return {
           gaConfig: {
+            enabled: config.get('ga.enabled'),
             name: config.get('ga.name'),
             tracker: config.get('ga.tracker'),
             fields: config.get('ga.fields'),
-            set: config.get('ga.set')
+            trackPages: config.get('ga.trackPages')
           }
         };
       }
@@ -23,7 +24,7 @@ export default function (kibana) {
         name: Joi.string(),
         tracker: Joi.string(),
         fields: Joi.object(),
-        set: Joi.object()
+        trackPages: Joi.boolean().default(true)
       }).default();
     }
   });
