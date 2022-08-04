@@ -4,7 +4,7 @@
 
 `./bin/kibana-plugin install https://github.com/jmcarp/kibana-ga/releases/download/v0.1.0/kibana-ga-v0.1.0.tar.gz`
 
-## Configure
+## Configure kibana.yml
 
 ```yaml
 ga.enabled: true
