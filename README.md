@@ -2,7 +2,7 @@
 
 ## Install
 
-`./bin/kibana plugin --install ga --url https://github.com/jmcarp/kibana-ga/releases/download/v0.1.0/kibana-ga-v0.1.0.tar.gz`
+`./bin/kibana-plugin install https://github.com/jmcarp/kibana-ga/releases/download/v0.1.0/kibana-ga-v0.1.0.tar.gz`
 
 ## Configure
 
